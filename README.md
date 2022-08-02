@@ -33,11 +33,13 @@ Databases:
 
 ## Project steps
 
-1. **Definition of database model and creation of migrations** for suppliers, customers and invoices tables. As a table columns for suppliers and customers table I defined attributes available in the entity XML from ARES API and needed for the invoice such as name, ICO, address, zip code etc. For the invoice table I used attributes from Excel file (ICO of the customer, ICO of the supplier, price).
+### 1. Definition of database model and migrations
 
-2. **Seeding the database**
+I defined database model and created table for suppliers, customers and invoices. As a table columns for suppliers and customers table I defined attributes available in the entity XML from ARES API and needed for the invoice such as name, ICO, address, zip code etc. For the invoice table I used attributes from Excel file (ICO of the customer, ICO of the supplier, price).
 
-### Customers & Suppliers:
+### 2. Seeding the database
+
+#### Customers & Suppliers:
 
 -   I created models for Supplier and Customer
 -   I filtered unique ICO values for both customers and suppliers in provided Excel so that I could create unique entities in the tables
@@ -49,13 +51,13 @@ Databases:
 
 -   I looped through all of the customers/suppliers (defined as unique ICO number) using foreach loop and saved customers/suppliers into DB.
 
-### Invoices:
+#### Invoices:
 
 -   I created model for Invoice and defined relationships between Invoice and Customer/Supplier, so that each invoice could be retrieved with data about the customer/supplier.
 -   In provided Excel files, I paired ICO of the customer/supplier with ID of supplier/customer in the database (customers/suppliers table) using VLOOKUP.
 -   Then, in every foreach loop iteration of the array, I Created new Invoice model class object, filled it with the data about customer id, supplier id and price and saved to DB.
 
-3. **Creating routes, controllers and views**
+### 3. Creating routes, controllers and views
 
 **In web.php I defined routes:**
 
@@ -75,8 +77,9 @@ Databases:
 -   **pdfView.blade.php** -> in resembles invoice.blade.php view (without download button) and is used to be downloaded as PDF.
 -   **main.blade.php** -> used as layout template, which yields some content
 
-4. **Adding based styling**
-   After all of these steps were done, I created basic styling for the table and invoice.
+### 4. Adding based styling
+
+After all of these steps were done, I created basic styling for the table and invoice.
 
 ## Difficulties
 
