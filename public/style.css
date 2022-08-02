@@ -1,0 +1,68 @@
+.invoice {
+    width: 21cm;
+    height: 29.7cm;
+    padding: 2rem;
+    position: relative;
+}
+
+.invoice__buttons {
+    position: absolute;
+    top: 5rem;
+    right: -10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.invoice__button {
+    background-color: royalblue;
+    text-decoration: none;
+    width: 105px;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 0.7rem;
+    margin: auto;
+    text-align: center;
+}
+.invoice__button--grey {
+    background-color: rgb(167, 165, 165);
+}
+.title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.table__container {
+    min-width: 500px;
+    width: 70%;
+    margin: auto;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: royalblue;
+    color: white;
+}
